@@ -33,7 +33,7 @@
   </head>
   <body class="bg-white font-common">
     <!-- Header/Navbar section start -->
-    <header class="h-16 flex items-center shadow-sm">
+    <header class="bg-white h-16 flex items-center shadow-sm sticky top-0">
       <nav class="flex justify-between items-center w-9/12 mx-auto">
         <div class="text-zinc-800 font-bold uppercase">
           <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
@@ -49,43 +49,99 @@
       class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto text-center"
       id="rulesContainer"
     >
-      <h1 class="text-center my-8 text-xl">Welcome to Quiz Hero</h1>
+      <h1 class="text-center my-8 text-xl">Important Questions!!!</h1>
       <div class="lg:w-[80%] md:w-[90%] w-[90%] mx-auto text-left">
-        <!-- Quiz rules start -->
+        <!-- Blog questions start -->
         <ul class="text-sm my-10">
           <li class="my-4">
-            <span class="bg-orange-200 px-2 rounded">Question 1:</span> Click on the
-            <span class="bg-green-600 text-white px-2 rounded">Start Quiz</span>
-            button below.
+            <span class="bg-orange-200 px-2 rounded">Question 1:</span> What are the 
+            differences between map, filter, forEach and find? 
+          </li>
+          <li class="my-1.5 text-justify">
+            <span class="bg-slate-200 px-2 rounded">map()</span> is used to create 
+            a new array from an existing array. It iterates through each element in the 
+            array and applies the provided function to each element and returns a new 
+            array. It doesn't alter the original array.
+          </li>
+          <li class="my-1.5 text-justify">
+            <span class="bg-slate-200 px-2 rounded">filter()</span> is used to create 
+            a new array from an existing array by filtering out unwanted elements. It 
+            iterates through each element of the array and returns a new array with only 
+            the elements that pass the filter criteria.
+          </li>
+          <li class="my-1.5 text-justify">
+            <span class="bg-slate-200 px-2 rounded">forEach()</span> is used to iterate 
+            through an array and perform an action on each element. It does not return a 
+            new array, but instead applies a function to each element of the existing array.
+          </li>
+          <li class="my-1.5 text-justify">
+            <span class="bg-slate-200 px-2 rounded">find()</span> is used to find a 
+            single element in an array that matches a given criteria. It iterates through 
+            each element of the array and returns the first element that matches the given 
+            criteria.
           </li>
           <li class="my-4">
-            <span class="bg-orange-200 px-2 rounded">Question 2:</span> After
-            clicking Start button, you will see a page with 3s count down, wait
-            until the count is over!
+            <span class="bg-orange-200 px-2 rounded">Question 2:</span> What are the 
+            differences between local storage, session storage and cookies?
+          </li>
+          <li class="my-1.5 text-justify">
+            <span class="bg-slate-200 px-2 rounded">Local storage</span> allows web 
+            applications to store data locally within the user's browser. It is permanent 
+            and remains even when the browser is closed. It can store up to 10MB of data.
+          </li>
+          <li class="my-1.5 text-justify">
+            <span class="bg-slate-200 px-2 rounded">Session storage</span> is similar 
+            to local storage, but it is limited to the current session. It is deleted when 
+            the user closes the browser. It can store up to 5MB of data.
+          </li>
+          <li class="my-1.5 text-justify">
+            <span class="bg-slate-200 px-2 rounded">Cookies</span> are small pieces of 
+            data stored in the user's browser. They are usually used to store information 
+            like login credentials, preferences, and shopping cart items. They are usually 
+            limited to 4KB of data and can be deleted by the user at any time.
           </li>
           <li class="my-4">
-            <span class="bg-orange-200 px-2 rounded">Question 3:</span> You will see
-            the questions with 4 options for each, and counter will start and
-            which will count your exam time.
+            <span class="bg-orange-200 px-2 rounded">Question 3:</span> What is event 
+            loop and how does it work?
+          </li>
+          <li class="my-1.5 text-justify">
+            <span class="bg-slate-200 px-2 rounded">Event Loop</span> is the secret 
+            behind JavaScript's asynchronous programming. It has one simple job to monitor 
+            the Call Stack and the Callback Queue. If the Call Stack is empty, the Event 
+            Loop will take the first event from the queue and will push it to the Call 
+            Stack, which effectively runs it. Such an iteration is called a tick in the 
+            Event Loop. Each event is just a function callback. It works by repeatedly 
+            checking for new events or inputs, and then processing them in order. The 
+            Event Loop is responsible for responding to user input, refreshing the display, 
+            and handling communication with other systems.
           </li>
           <li class="my-4">
-            <span class="bg-orange-200 px-2 rounded">Step 4:</span> You have to
-            select the correct answer, and you have 60 seconds to answer 6
-            questions.
+            <span class="bg-orange-200 px-2 rounded">Question 4:</span> What is use of 
+            "quizTimer()" function in this project? 
+          </li>
+          <li class="my-1.5 text-justify">
+            The <span class="bg-slate-200 px-2 rounded">quizTimer()</span> function is 
+            used to keep track of the time a user takes to answer the quizzes. The function 
+            also takes a dismiss argument, if it is set to true, will stop the counting. 
+            Initially, the color of the timer is green but when the value of the timer 
+            exceeds 60 seconds the color of the timer turns red.
           </li>
           <li class="my-4">
-            <span class="bg-orange-200 px-2 rounded">Step 5:</span> Click on the
-            submit quiz button, when you are done with all the answers.
+            <span class="bg-orange-200 px-2 rounded">Question 5:</span> What is use of 
+            "chooseQuiz()" function in this project? 
+          </li>
+          <li class="my-1.5 text-justify">
+            The <span class="bg-slate-200 px-2 rounded">chooseQuiz()</span> function 
+            takes an index and a given answer as arguments and updates the answers array 
+            for the selected quiz from the quizData array. It checks whether the quizzes 
+            answer already exists in the answers array and if it does, it replaces the 
+            existing answer with the given answer. If not, it adds the quizzes answer to 
+            the answers array. It also calls the displayAnswers function to display the 
+            updated answers array.
           </li>
         </ul>
-        <!-- Quiz rules end -->
+        <!-- Blog questions end -->
       </div>
-      <button class="bg-green-600 px-20 py-2 text-white rounded" id="startQuiz">
-        Start Quiz
-      </button>
-    </section>
-    <!-- Landing page content start -->
-
     </section>
   </body>
 </html>
