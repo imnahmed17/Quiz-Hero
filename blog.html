@@ -106,13 +106,12 @@
           </li>
           <li class="my-1.5 text-justify">
             <span class="bg-slate-200 px-2 rounded">Event Loop</span> is the secret 
-            behind JavaScript's asynchronous programming. It has one simple job to monitor 
-            the Call Stack and the Callback Queue. If the Call Stack is empty, the Event 
-            Loop will take the first event from the queue and will push it to the Call 
-            Stack, which effectively runs it. Such an iteration is called a tick in the 
-            Event Loop. Each event is just a function callback. It works by repeatedly 
+            behind javascript's asynchronous programming. It has one simple job to monitor 
+            the call stack and the callback queue. If the call stack is empty, the event 
+            loop will take the first event from the queue and will push it to the call 
+            stack. Each event is just a function callback. It works by repeatedly 
             checking for new events or inputs, and then processing them in order. The 
-            Event Loop is responsible for responding to user input, refreshing the display, 
+            event loop is responsible for responding to user input, refreshing the display, 
             and handling communication with other systems.
           </li>
           <li class="my-4">
